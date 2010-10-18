@@ -1,0 +1,8 @@
+{
+  "name": "dotaccess",
+  "description": "A library to access objects using dot notation strings.",
+  "version": "0.0.1",
+  "author": "Naitik Shah <n@daaku.org>",
+  "directories": { "lib": "./lib" },
+  "engines": { "node": ">= 0.2.3" }
+}
