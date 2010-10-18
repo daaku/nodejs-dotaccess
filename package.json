@@ -4,5 +4,9 @@
   "version": "0.0.1",
   "author": "Naitik Shah <n@daaku.org>",
   "directories": { "lib": "./lib" },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nshah/nodejs-dotaccess"
+  },
   "engines": { "node": ">= 0.2.3" }
 }
