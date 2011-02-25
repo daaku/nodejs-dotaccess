@@ -1,6 +1,7 @@
 var dotaccess = require('dotaccess')
+  , assert = require('assert')
 
-exports['get stuff'] = function(assert, beforeExit) {
+exports['get stuff'] = function(beforeExit) {
   var obj = {
     answer: 42,
     deep: {
@@ -20,7 +21,7 @@ exports['get stuff'] = function(assert, beforeExit) {
   assert.equal(46, dotaccess.get(obj, ['missing'], 46), 'Expect 46')
 }
 
-exports['set stuff'] = function(assert, beforeExit) {
+exports['set stuff'] = function(beforeExit) {
   var obj = {
     existing: {
       one: 47
@@ -44,7 +45,7 @@ exports['set stuff'] = function(assert, beforeExit) {
   assert.equal(47, dotaccess.get(obj, ['existing', 'one']), 'Expect 47 - array')
 }
 
-exports['failed sets'] = function(assert, beforeExit) {
+exports['failed sets'] = function(beforeExit) {
   var obj = {
     bool: true,
     integer: 42,
