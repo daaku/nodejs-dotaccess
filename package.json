@@ -6,7 +6,7 @@
   "main": "index",
   "repository": {
     "type": "git",
-    "url": "http://github.com/nshah/nodejs-dotaccess"
+    "url": "git://github.com/nshah/nodejs-dotaccess.git"
   },
   "engines": { "node": ">= 0.4.1" }
 }
