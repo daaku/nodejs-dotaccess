@@ -1,4 +1,4 @@
-var dotaccess = require('dotaccess')
+var dotaccess = require('../index')
   , assert = require('assert')
 
 exports['get stuff'] = function(beforeExit) {
