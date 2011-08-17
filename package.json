@@ -1,7 +1,7 @@
 {
   "name": "dotaccess",
   "description": "A library to access objects using dot notation strings.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/nshah/nodejs-dotaccess",
   "author": "Naitik Shah <n@daaku.org>",
   "main": "lib/dotaccess",
