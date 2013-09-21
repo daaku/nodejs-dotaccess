@@ -26,6 +26,9 @@ console.log(dotaccess.get(obj, ['deep', 'trench']))
 // prints 44, spaces are allowed
 console.log(dotaccess.get(obj, 'deep.funky names'))
 
+// overwrite existing values
+dotaccess.set(obj, 'deep.funky names', 99, true)
+
 // can also set stuff
-dotaccess.set(obj, 'deep.funky names', 99)
+dotaccess.set(obj, 'deep.an even funkier_name', 'green')
 ```
