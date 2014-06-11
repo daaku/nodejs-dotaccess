@@ -21,6 +21,41 @@ exports['get stuff'] = function() {
   assert.equal(46, dotaccess.get(obj, ['missing'], 46), 'Expect 46')
 }
 
+exports['unset stuff'] = function() {
+  var obj = {
+    answer: 42,
+    deep: {
+      trench: 43,
+      'funky names': 44,
+      'including a .': 45
+    }
+  }
+
+  assert(dotaccess.unset(obj, 'answer'))
+  assert.equal(undefined, dotaccess.get(obj, 'answer'), 'Expect unset - string')
+
+  assert(dotaccess.unset(obj, ['answer']))
+  assert.equal(undefined, dotaccess.get(obj, 'answer'), 'Expect unset - single element array')
+
+  assert(dotaccess.unset(obj, 'deep.trench'))
+  assert.equal(undefined, dotaccess.get(obj, 'deep.trench'), 'Expect unset - dot string')
+
+  assert(dotaccess.unset(obj, ['deep', 'trench']))
+  assert.equal(undefined, dotaccess.get(obj, ['deep', 'trench']), 'Expect unset - array')
+
+  assert(dotaccess.unset(obj, 'deep.funky names'))
+  assert.equal(undefined, dotaccess.get(obj, 'deep.funky names'), 'Expect unset - dot string funky names')
+
+  assert(dotaccess.unset(obj, ['deep', 'including a .']))
+  assert.equal(undefined, dotaccess.get(obj, ['deep', 'including a .']), 'Expect unset - array including dot')
+
+  assert(dotaccess.unset(obj, 'missing'))
+  assert.equal(undefined, dotaccess.get(obj, 'missing'), 'Expect unset - missing')
+
+  assert(dotaccess.unset(obj, ['missing']))
+  assert.equal(undefined, dotaccess.get(obj, ['missing']), 'Expect unset - missing')
+}
+
 exports['set stuff'] = function() {
   var obj = {
     existing: {
