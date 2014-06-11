@@ -31,4 +31,7 @@ dotaccess.set(obj, 'deep.funky names', 99, true)
 
 // can also set stuff
 dotaccess.set(obj, 'deep.an even funkier_name', 'green')
+
+// or unset stuff
+dotaccess.unset(obj, 'deep')
 ```
